@@ -1,16 +1,13 @@
-// Semua isi landing page ada di file ini. Ubah teks di sini, halaman ikut berubah.
-
 export const kost = {
   name: "Kost Putra Pendekar",
   city: "Yogyakarta",
   tagline: "Kost putra eksklusif di Jogja, bebas jam malam.",
   intro:
     "Kamar lengkap dengan AC, kamar mandi dalam, dan water heater. Wifi di atas 150 Mbps untuk kuliah daring, kerja, dan main game tanpa putus.",
-  price: 1_400_000, // per bulan
+  price: 1_400_000,
   priceNote: "Hubungi pemilik untuk info deposit dan biaya lain.",
 };
 
-// Nomor dalam format internasional tanpa tanda + (08xx menjadi 628xx)
 export const whatsapp = {
   number: "6285974853568",
   display: "0859-7485-3568",
@@ -20,8 +17,7 @@ export const whatsapp = {
 
 export const location = {
   mapsUrl: "https://maps.app.goo.gl/T8BPBiQmhEN276XU8",
-  address: "", // contoh: "Jl. Kaliurang Km 14, Sleman, Yogyakarta"
-  // Buka Google Maps > Bagikan > Sematkan peta > salin isi src="..." dari kode iframe
+  address: "",
   embedSrc:
     "https://maps.google.com/maps?q=-7.6833639,110.4170469&z=16&output=embed",
 };
@@ -52,9 +48,6 @@ export const facilities: Facility[] = [
   { icon: "parking", label: "Parkiran" },
 ];
 
-// Taruh foto di folder public/foto lalu daftarkan di sini.
-// Contoh: { src: "/foto/kamar.jpg", alt: "Kamar dengan kasur, lemari, dan meja" }
-// Foto pertama dipakai di bagian atas halaman, sisanya di galeri.
 export const photos: { src: string; alt: string; caption: string }[] = [
   { src: "/foto/kamar-ac.jpg", alt: "Kamar kosong dengan AC, jendela bergorden, dan lampu plafon", caption: "Kamar ber-AC" },
   { src: "/foto/kamar-kasur-meja.jpg", alt: "Kamar dengan kasur, meja, dan rak dinding", caption: "Kasur dan meja" },
@@ -80,7 +73,6 @@ export const steps = [
   },
 ];
 
-// Pertanyaan yang sering ditanyakan. Hanya berisi hal yang sudah pasti.
 export const faq = [
   {
     q: "Kost ini untuk putra atau putri?",

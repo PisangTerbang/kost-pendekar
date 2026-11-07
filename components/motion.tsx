@@ -10,14 +10,12 @@ import {
 } from "motion/react";
 import { useEffect, useRef } from "react";
 
-// Animasi otomatis dimatikan untuk pengguna yang mengaktifkan "kurangi gerakan"
 export function MotionProvider({ children }: { children: React.ReactNode }) {
   return <MotionConfig reducedMotion="user">{children}</MotionConfig>;
 }
 
 const ease = [0.22, 1, 0.36, 1] as const;
 
-// Muncul saat masuk layar
 export function Reveal({
   children,
   delay = 0,
@@ -42,7 +40,6 @@ export function Reveal({
   );
 }
 
-// Judul yang muncul kata per kata
 export function WordsReveal({ text, className }: { text: string; className?: string }) {
   const words = text.split(" ");
   return (
@@ -64,7 +61,6 @@ export function WordsReveal({ text, className }: { text: string; className?: str
   );
 }
 
-// Angka yang menghitung naik saat terlihat
 const formats = {
   number: (n: number) => Math.round(n).toLocaleString("id-ID"),
   rupiah: (n: number) =>
@@ -110,7 +106,6 @@ export function CountUp({
   );
 }
 
-// Garis yang tergambar dari kiri saat terlihat
 export function DrawLine({ className }: { className?: string }) {
   return (
     <motion.span
@@ -125,7 +120,6 @@ export function DrawLine({ className }: { className?: string }) {
   );
 }
 
-// Daftar yang anggotanya muncul bergantian
 export function Stagger({
   children,
   className,

@@ -6,7 +6,6 @@ import { useEffect, useState } from "react";
 
 type Photo = { src: string; alt: string; caption: string };
 
-// Foto di bagian atas berganti otomatis dengan efek zoom pelan
 export function HeroSlides({ photos }: { photos: Photo[] }) {
   const [i, setI] = useState(0);
   const [paused, setPaused] = useState(false);

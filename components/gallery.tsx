@@ -7,7 +7,6 @@ import { useCallback, useEffect, useRef, useState } from "react";
 type Photo = { src: string; alt: string; caption: string };
 const ease = [0.22, 1, 0.36, 1] as const;
 
-// Galeri foto: klik untuk membuka tampilan penuh, geser dengan panah atau swipe
 export function Gallery({ photos }: { photos: Photo[] }) {
   const [open, setOpen] = useState<number | null>(null);
   const dialog = useRef<HTMLDialogElement>(null);

@@ -2,7 +2,6 @@
 
 import { motion, useScroll, useTransform } from "motion/react";
 
-// Bintang dengan posisi tetap (dihitung sekali, sama di server dan browser)
 function makeStars(count: number) {
   let seed = 7;
   const rand = () => {
@@ -18,7 +17,6 @@ function makeStars(count: number) {
 }
 const stars = makeStars(110);
 
-// Jendela kost di lapisan depan: [x, y, menyala berkedip?]
 const windows: [number, number, boolean][] = [
   [86, 318, false], [110, 318, true], [86, 348, true], [110, 348, false],
   [262, 300, true], [288, 300, false], [314, 300, false], [262, 334, false], [288, 334, true], [314, 334, false],
@@ -26,7 +24,6 @@ const windows: [number, number, boolean][] = [
   [1352, 326, true], [1378, 326, false],
 ];
 
-// Atap joglo: puncak curam di tengah, sayap landai di kiri-kanan
 function Joglo({ x, w, base }: { x: number; w: number; base: number }) {
   const c = x + w / 2;
   const top = base - w * 0.42;
@@ -45,10 +42,8 @@ export function JogjaNight({ compact = false }: { compact?: boolean }) {
 
   return (
     <div aria-hidden="true" className="pointer-events-none absolute inset-0 overflow-hidden">
-      {/* Langit */}
       <div className="absolute inset-0 bg-[linear-gradient(180deg,#0a1428_0%,#12223f_50%,#1f3a66_88%,#2a4a7c_100%)]" />
 
-      {/* Bintang berkelip dan bintang jatuh */}
       <svg viewBox="0 0 1440 640" preserveAspectRatio="xMidYMin slice" className="absolute inset-0 size-full">
         <defs>
           <linearGradient id="trail" x1="0" y1="0" x2="1" y2="0">
@@ -66,7 +61,6 @@ export function JogjaNight({ compact = false }: { compact?: boolean }) {
         </g>
       </svg>
 
-      {/* Bulan sabit */}
       <motion.div
         style={{ y: moonY }}
         className={`absolute top-[14%] size-12 sm:size-14 ${compact ? "right-[12%]" : "left-[44%] max-lg:left-auto max-lg:right-[10%]"}`}
@@ -75,7 +69,6 @@ export function JogjaNight({ compact = false }: { compact?: boolean }) {
         <span className="absolute inset-0 rounded-full shadow-[inset_-11px_5px_0_0_#fff4d6]" />
       </motion.div>
 
-      {/* Siluet kota Jogja di bagian bawah */}
       <svg
         viewBox="0 110 1440 290"
         preserveAspectRatio="xMidYMax slice"
@@ -91,7 +84,6 @@ export function JogjaNight({ compact = false }: { compact?: boolean }) {
           </filter>
         </defs>
         <rect x="0" y="200" width="1440" height="200" fill="url(#haze)" />
-        {/* Gunung Merapi dengan asap tipis */}
         <motion.g style={{ y: far }}>
           <path
             fill="#1a2f55"
@@ -104,7 +96,6 @@ export function JogjaNight({ compact = false }: { compact?: boolean }) {
           </g>
         </motion.g>
 
-        {/* Atap joglo, pepohonan, dan Tugu Jogja */}
         <motion.g style={{ y: mid }} fill="#14264a">
           <Joglo x={150} w={150} base={340} />
           <Joglo x={420} w={120} base={345} />
@@ -115,7 +106,6 @@ export function JogjaNight({ compact = false }: { compact?: boolean }) {
           <circle cx="620" cy="326" r="30" />
           <circle cx="1120" cy="322" r="36" />
           <circle cx="1150" cy="334" r="24" />
-          {/* Tugu */}
           <path d="M968 345h44v-14h-6v-10h-32v10h-6z" />
           <path d="M978 321l4-86h16l4 86z" />
           <path d="M982 235l8-38 8 38z" />
@@ -123,7 +113,6 @@ export function JogjaNight({ compact = false }: { compact?: boolean }) {
           <rect x="0" y="338" width="1440" height="62" />
         </motion.g>
 
-        {/* Lapisan depan: bangunan kost dengan jendela menyala */}
         <g fill="#0b1527">
           <path d="M60 400V300l38-22 38 22v100z" />
           <path d="M236 400V284h104v116z" />
@@ -150,7 +139,6 @@ export function JogjaNight({ compact = false }: { compact?: boolean }) {
         </g>
       </svg>
 
-      {/* Gelapkan sedikit di bagian bawah agar teks tetap terbaca */}
       <div className="absolute inset-x-0 bottom-0 h-12 bg-gradient-to-t from-[#0a1428]/60 to-transparent" />
     </div>
   );

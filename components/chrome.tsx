@@ -16,7 +16,6 @@ function useScrolledPast(px: number) {
   return past;
 }
 
-// Header transparan di atas hero, lalu berubah jadi kapsul mengambang saat di-scroll
 export function Header({ name, waLink }: { name: string; waLink: string }) {
   const scrolled = useScrolledPast(40);
   return (
@@ -59,7 +58,6 @@ export function Header({ name, waLink }: { name: string; waLink: string }) {
   );
 }
 
-// Tombol WhatsApp mengambang, muncul setelah melewati hero
 export function FloatingWa({ waLink }: { waLink: string }) {
   const show = useScrolledPast(600);
   return (
@@ -83,7 +81,6 @@ export function FloatingWa({ waLink }: { waLink: string }) {
   );
 }
 
-// Bar bawah khusus HP: harga dan tombol chat selalu terlihat setelah melewati hero
 export function MobileBar({ waLink, price }: { waLink: string; price: string }) {
   const show = useScrolledPast(520);
   return (

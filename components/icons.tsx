@@ -1,6 +1,5 @@
 import type { IconName } from "@/lib/data";
 
-// Ikon garis sederhana, 24x24, mengikuti warna teks (currentColor)
 const paths: Record<IconName, React.ReactNode> = {
   wifi: (
     <>

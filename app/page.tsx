@@ -61,7 +61,6 @@ export default function Home() {
       </a>
 
       <main id="isi">
-        {/* ---------- Hero ---------- */}
         <section className="relative overflow-hidden bg-deep text-white">
           <JogjaNight />
           <div className={`${wrap} relative grid min-h-[92svh] items-center gap-14 pb-20 pt-32 lg:grid-cols-[1.1fr_1fr] lg:pt-28`}>
@@ -97,7 +96,6 @@ export default function Home() {
                 <HeroSlides photos={heroPhotos} />
               </div>
 
-              {/* Kartu kecil yang melayang di atas foto */}
               <div className="float-a absolute -left-3 top-8 flex items-center gap-3 rounded-2xl bg-white/90 px-4 py-3 text-ink shadow-xl backdrop-blur sm:-left-8">
                 <span className="grid size-9 place-items-center rounded-xl bg-nila text-white">
                   <Icon name="wifi" className="size-5" />
@@ -124,7 +122,6 @@ export default function Home() {
           </div>
         </section>
 
-        {/* ---------- Pita fasilitas berjalan ---------- */}
         <div className="marquee overflow-hidden border-b border-line bg-white py-5" aria-hidden="true">
           <div className="marquee-track flex w-max items-center gap-10 pr-10">
             {[...facilities, ...facilities].map((f, i) => (
@@ -137,7 +134,6 @@ export default function Home() {
           </div>
         </div>
 
-        {/* ---------- Fasilitas (bento) ---------- */}
         <section id="fasilitas" className={`${wrap} py-20 sm:py-28`}>
           <Reveal>
             <h2 className={h2}>Fasilitas lengkap, tinggal bawa barang pribadi</h2>
@@ -212,7 +208,6 @@ export default function Home() {
           </Stagger>
         </section>
 
-        {/* ---------- Galeri (hanya tampil kalau ada foto) ---------- */}
         {galleryPhotos.length > 0 && (
           <section aria-labelledby="galeri" className={`${wrap} pb-20 sm:pb-28`}>
             <Reveal>
@@ -222,7 +217,6 @@ export default function Home() {
           </section>
         )}
 
-        {/* ---------- Harga ---------- */}
         <section id="harga" className="relative overflow-hidden bg-white py-20 sm:py-28">
           <div className={`${wrap} grid gap-12 md:grid-cols-2 md:items-center`}>
             <Reveal>
@@ -250,7 +244,6 @@ export default function Home() {
           </div>
         </section>
 
-        {/* ---------- Cara sewa: memang berurutan ---------- */}
         <section className={`${wrap} py-20 sm:py-28`}>
           <Reveal>
             <h2 className={h2}>Tiga langkah mulai ngekos</h2>
@@ -273,7 +266,6 @@ export default function Home() {
           </div>
         </section>
 
-        {/* ---------- Tanya jawab ---------- */}
         <section id="faq" className={`${wrap} pb-20 sm:pb-28`}>
           <div className="grid gap-10 lg:grid-cols-[1fr_1.6fr]">
             <Reveal>
@@ -314,7 +306,6 @@ export default function Home() {
           </div>
         </section>
 
-        {/* ---------- Lokasi ---------- */}
         <section id="lokasi" className={`${wrap} pb-20 sm:pb-28`}>
           <Reveal>
             <div className="grid overflow-hidden rounded-[36px] bg-white ring-1 ring-line lg:grid-cols-[1fr_1.5fr]">
@@ -353,7 +344,6 @@ export default function Home() {
           </Reveal>
         </section>
 
-        {/* ---------- Penutup ---------- */}
         <section className="relative overflow-hidden bg-deep text-white">
           <JogjaNight compact />
           <div className={`${wrap} relative py-24 text-center sm:py-32`}>
